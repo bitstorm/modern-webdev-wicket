@@ -1,11 +1,16 @@
 package org.example.wicket;
 
+import org.apache.wicket.DefaultPageManagerProvider;
 import org.apache.wicket.csp.CSPDirective;
 import org.apache.wicket.csp.CSPDirectiveSrcValue;
 import org.apache.wicket.markup.html.WebPage;
+import org.apache.wicket.pageStore.IPageStore;
 import org.springframework.stereotype.Component;
+import org.wicketstuff.datastores.common.SessionQuotaManagingDataStore;
+import org.wicketstuff.datastores.hazelcast.HazelcastDataStore;
 
 import com.giffing.wicket.spring.boot.starter.app.WicketBootStandardWebApplication;
+import com.hazelcast.core.HazelcastInstance;
 
 /**
  * Application object for your web application.
@@ -40,5 +45,15 @@ public class WicketApplication extends WicketBootStandardWebApplication
 			.add(CSPDirective.FONT_SRC, "https://fonts.gstatic.com");
 
 		// add your configuration here
+		HazelcastInstance instance = getApplicationContext().getBean(HazelcastInstance.class);
+
+        setPageManagerProvider(new DefaultPageManagerProvider(this) {
+            @Override
+            protected IPageStore newPersistentStore() {
+                HazelcastDataStore hazelcastDataStore = new HazelcastDataStore(getName(), instance);
+
+                return new SessionQuotaManagingDataStore(hazelcastDataStore, 4);
+            }
+        });
 	}
 }
