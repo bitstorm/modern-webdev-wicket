@@ -1,0 +1,93 @@
+# Created by https://www.gitignore.io
+
+./pool.properties
+src/hibernate*.cfg.xml
+src/logback.xml
+dev.properties
+test.properties
+
+### Vim ###
+*~
+
+### Idea ###
+.idea/
+*.iml
+
+### Eclipse ###
+*.pydevproject
+.mymetadata
+.metadata
+.gradle
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+
+.settings/
+.loadpath
+
+# Eclipse Core
+.project
+.tern-project
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+# PDT-specific
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# TeXlipse plugin
+.texlipse
+
+### SVN ###
+.svn/
+
+### Java ###
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# Gradle build
+build
+.checkstyle
+/target/
+
+env.variables
+
+Servers/*
+
+a.html
+
+nohup.out
+
+RET.log
+
+.DS_Store 
+.vscode
+*.log
+.factorypath
+logs.dir_IS_UNDEFINED
