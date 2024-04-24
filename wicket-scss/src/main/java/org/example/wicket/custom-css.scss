@@ -1,0 +1,8 @@
+//SCSS VARIABLE OVERRIDING
+$primary: #397EB4;
+$warning: #f19027;
+$min-contrast-ratio: 3;
+
+
+//INCLUDING MAIN BOOTSTRAP SCSSS
+@import "webjars!bootstrap/current/scss/bootstrap.scss";

@@ -5,6 +5,7 @@ import org.apache.wicket.csp.CSPDirectiveSrcValue;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
 
+import de.agilecoders.wicket.sass.BootstrapSass;
 import de.agilecoders.wicket.webjars.WicketWebjars;
 
 /**
@@ -40,5 +41,6 @@ public class WicketApplication extends WebApplication
 
 		// add your configuration here
 		WicketWebjars.install(this);
+        BootstrapSass.install(this);
 	}
 }
