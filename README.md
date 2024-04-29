@@ -21,7 +21,7 @@ public void init()
 
 renderHead
 
-```
+```java
 @Override
 public void renderHead(IHeaderResponse response) {
 	super.renderHead(response);
@@ -67,4 +67,42 @@ xml hazelcast
     <artifactId>hazelcast-spring</artifactId>
     <version>5.3.6</version>
 </dependency>
+```
+
+java hazelcast
+```java
+@Configuration
+@EnableHazelcastHttpSession
+@EnableCaching
+public class HazelcastConfig {
+
+    @SpringSessionHazelcastInstance
+    @Bean(destroyMethod = "shutdown")
+    public HazelcastInstance hazelcastInstance() {
+        Config config = new Config();
+
+        JoinConfig join = config.getNetworkConfig().getJoin();
+        join.getMulticastConfig().setEnabled(true);
+
+        AttributeConfig attributeConfig = new AttributeConfig()
+                .setName(HazelcastIndexedSessionRepository.PRINCIPAL_NAME_ATTRIBUTE)
+                .setExtractorClassName(PrincipalNameExtractor.class.getName());
+
+        config.getMapConfig(HazelcastIndexedSessionRepository.DEFAULT_SESSION_MAP_NAME)
+            .addAttributeConfig(attributeConfig).addIndexConfig(
+                new IndexConfig(IndexType.HASH, HazelcastIndexedSessionRepository.PRINCIPAL_NAME_ATTRIBUTE));
+
+        SerializerConfig serializerConfig = new SerializerConfig();
+        serializerConfig.setImplementation(new HazelcastSessionSerializer()).setTypeClass(MapSession.class);
+        config.getSerializationConfig().addSerializerConfig(serializerConfig);
+
+        return Hazelcast.newHazelcastInstance(config);
+    }
+
+    @Bean
+    public CacheManager cacheManager(HazelcastInstance hazelcastInstance) {
+        return new HazelcastCacheManager(hazelcastInstance);
+    }
+
+}
 ```
