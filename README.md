@@ -8,7 +8,7 @@ SERVER_PORT=8080 mvn spring-boot:run
 
 init
 
-```
+```java
 public void init()
 {
 	super.init();
@@ -34,7 +34,7 @@ public void renderHead(IHeaderResponse response) {
 
 xml hazelcast
 
-```
+```xml
 <!-- SESSION REPLICATION -->
 <dependency>
     <groupId>org.springframework.session</groupId>
