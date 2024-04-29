@@ -82,6 +82,7 @@ public class HazelcastConfig {
         Config config = new Config();
 
         JoinConfig join = config.getNetworkConfig().getJoin();
+        // enabling multicast for autodiscovery.
         join.getMulticastConfig().setEnabled(true);
 
         AttributeConfig attributeConfig = new AttributeConfig()
@@ -91,7 +92,8 @@ public class HazelcastConfig {
         config.getMapConfig(HazelcastIndexedSessionRepository.DEFAULT_SESSION_MAP_NAME)
             .addAttributeConfig(attributeConfig).addIndexConfig(
                 new IndexConfig(IndexType.HASH, HazelcastIndexedSessionRepository.PRINCIPAL_NAME_ATTRIBUTE));
-
+        
+        // use custom serializer for better performances. This is optional.
         SerializerConfig serializerConfig = new SerializerConfig();
         serializerConfig.setImplementation(new HazelcastSessionSerializer()).setTypeClass(MapSession.class);
         config.getSerializationConfig().addSerializerConfig(serializerConfig);
