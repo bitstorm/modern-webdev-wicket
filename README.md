@@ -13,7 +13,6 @@ public void init()
 {
 	super.init();
 
-	
 	// add your configuration here
 	WicketWebjars.install(this);
 }
@@ -70,6 +69,7 @@ xml hazelcast
 ```
 
 java hazelcast
+
 ```java
 @Configuration
 @EnableHazelcastHttpSession
@@ -106,3 +106,52 @@ public class HazelcastConfig {
 
 }
 ```
+
+scss pom
+
+```xml
+<dependency>
+    <groupId>de.agilecoders.wicket.webjars</groupId>
+    <artifactId>wicket-webjars</artifactId>
+    <version>4.0.3</version>
+</dependency>
+
+<dependency>
+    <groupId>de.agilecoders.wicket</groupId>
+    <artifactId>wicket-bootstrap-sass</artifactId>
+    <version>7.0.3</version>
+</dependency>
+
+<dependency>
+    <groupId>org.webjars</groupId>
+    <artifactId>bootstrap</artifactId>
+    <version>5.3.3</version>
+</dependency>
+```
+
+scss init
+
+```java
+@Override
+public void init()
+{
+    super.init();
+
+   
+    // add your configuration here
+    WicketWebjars.install(this);
+    BootstrapSass.install(this);
+}
+```
+
+scss resource
+
+```java
+protected final CssReferenceHeaderItem customCss = 
+    CssHeaderItem.forReference(new SassResourceReference(HomePage.class, "custom-css.scss"));
+
+@Override
+public void renderHead(IHeaderResponse response) {
+    response.render(customCss);
+}
+```    

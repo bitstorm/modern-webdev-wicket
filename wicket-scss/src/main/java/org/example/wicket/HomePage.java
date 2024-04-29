@@ -11,7 +11,7 @@ import de.agilecoders.wicket.sass.SassResourceReference;
 public class HomePage extends WebPage {
 	private static final long serialVersionUID = 1L;
 
-	protected static final CssReferenceHeaderItem customCss = CssHeaderItem.forReference(new SassResourceReference(HomePage.class, "custom-css.scss"));
+	protected final CssReferenceHeaderItem customCss = CssHeaderItem.forReference(new SassResourceReference(HomePage.class, "custom-css.scss"));
 
 	public HomePage(final PageParameters parameters) {
 		super(parameters);

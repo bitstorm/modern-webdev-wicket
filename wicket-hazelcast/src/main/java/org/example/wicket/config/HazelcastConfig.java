@@ -4,7 +4,6 @@ import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 import org.springframework.session.MapSession;
 import org.springframework.session.hazelcast.HazelcastIndexedSessionRepository;
 import org.springframework.session.hazelcast.HazelcastSessionSerializer;
@@ -24,7 +23,6 @@ import com.hazelcast.spring.cache.HazelcastCacheManager;
 
 @Configuration
 @EnableHazelcastHttpSession
-@Profile("!prod")
 @EnableCaching
 public class HazelcastConfig {
 
@@ -55,5 +53,4 @@ public class HazelcastConfig {
     public CacheManager cacheManager(HazelcastInstance hazelcastInstance) {
         return new HazelcastCacheManager(hazelcastInstance);
     }
-
 }
