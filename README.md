@@ -32,3 +32,39 @@ public void renderHead(IHeaderResponse response) {
 }
 ```
 
+xml hazelcast
+
+```
+<!-- SESSION REPLICATION -->
+<dependency>
+    <groupId>org.springframework.session</groupId>
+    <artifactId>spring-session-core</artifactId>
+    <version>3.2.2</version>
+</dependency>
+
+<!-- SPRING BOOT CONFIG -->
+<dependency>
+    <groupId>org.springframework.session</groupId>
+    <artifactId>spring-session-hazelcast</artifactId>
+    <version>3.2.2</version>          
+</dependency>
+
+<dependency>
+  <groupId>com.giffing.wicket.spring.boot.starter</groupId>
+  <artifactId>wicket-spring-boot-starter</artifactId>
+  <version>4.0.0</version>        
+</dependency>
+
+<!-- HAZELCAST CONFIG -->
+<dependency>
+    <groupId>org.wicketstuff</groupId>
+    <artifactId>wicketstuff-datastore-hazelcast</artifactId>
+    <version>10.0.0</version>
+</dependency>
+
+<dependency>
+    <groupId>com.hazelcast</groupId>
+    <artifactId>hazelcast-spring</artifactId>
+    <version>5.3.6</version>
+</dependency>
+```
