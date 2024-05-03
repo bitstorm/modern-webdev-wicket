@@ -16,7 +16,7 @@ public class NoPageIdMapper extends MountedMapper {
 
     @Override
     protected void encodePageComponentInfo(Url url, PageComponentInfo info) {
-        //we are generating an url to a behavior, we keep all information, otherwise we consider we don't want version in url
+        //if componentInfo is null we have a page url and we skip page parameters, otherwise we keep them
         if (info.getComponentInfo() != null) {
             super.encodePageComponentInfo(url, info);
         }
