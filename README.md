@@ -7,7 +7,7 @@ Java developers that might feel lost with modern web technologies and are not co
 
 no id mapper
 
-```
+```java
 public class NoPageIdMapper extends MountedMapper {
 
     public NoPageIdMapper(String mountPath, Class<? extends IRequestablePage> pageClass) {
