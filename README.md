@@ -1,9 +1,28 @@
 # modern-webdev-wicket
 
-ccc
+
+Java developers that might feel lost with modern web technologies and are not comfortable with the classic JavaScript-based SPA applications.
+
+
+
+no id mapper
 
 ```
-SERVER_PORT=8080 mvn spring-boot:run
+public class NoPageIdMapper extends MountedMapper {
+
+    public NoPageIdMapper(String mountPath, Class<? extends IRequestablePage> pageClass) {
+        super(mountPath, pageClass);
+    }
+
+    @Override
+    protected void encodePageComponentInfo(Url url, PageComponentInfo info) {
+        //we are generating an url to a behavior, we keep all information, otherwise we consider we don't want version in url
+        if (info.getComponentInfo() != null) {
+            super.encodePageComponentInfo(url, info);
+        }
+
+    }
+}
 ```
 
 init
@@ -107,6 +126,12 @@ public class HazelcastConfig {
     }
 
 }
+```
+
+Hazelcast start
+
+```
+SERVER_PORT=8080 mvn spring-boot:run
 ```
 
 scss pom
