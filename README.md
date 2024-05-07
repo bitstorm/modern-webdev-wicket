@@ -24,6 +24,18 @@ public class NoPageIdMapper extends MountedMapper {
     }
 }
 ```
+no id mapper use
+
+
+```java
+public void init()
+{
+	super.init();
+
+	NoPageIdMapper mapper = new NoPageIdMapper(path, pageClass);
+	mount(mapper);
+}
+```
 
 init
 
