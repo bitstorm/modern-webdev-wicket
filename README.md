@@ -1,4 +1,4 @@
-# modern-webdev-wicket
+# Modern Web development with Apache Wicket
 
 
 When it comes to implement web applications, Java developers usually feel lost with modern web technologies and they might think that nowadays it's not possible to implement robust and maintainable web applications without adopting the standard JavaScript-based development stack. But what if I tell you that Java is a powerful platform also for web development and that you don't need to switch to a different technology?
@@ -13,12 +13,6 @@ More in details you will see how to reach the following goals:
 - Styling your application using SCSS
 
 ### Produce resurce-friendly URLs
-
-### Manage CSS and JavaScript libraries with WebJars and Maven
-
-### Use Spring Boot and Hazelcast to scale your application with session clustering and caching
-
-### Style your application eith SCSS
 
 no id mapper
 
@@ -52,6 +46,8 @@ public void init()
 }
 ```
 
+### Manage CSS and JavaScript libraries with WebJars and Maven
+
 init
 
 ```java
@@ -76,6 +72,9 @@ public void renderHead(IHeaderResponse response) {
 
 }
 ```
+
+
+### Use Spring Boot and Hazelcast to scale your application with session clustering and caching
 
 xml hazelcast
 
@@ -160,6 +159,8 @@ Hazelcast start
 ```
 SERVER_PORT=8080 mvn spring-boot:run
 ```
+
+### Style your application eith SCSS
 
 scss pom
 
