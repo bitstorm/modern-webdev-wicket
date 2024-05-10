@@ -1,9 +1,9 @@
 # modern-webdev-wicket
 
 
-When it comes to implement web applications, Java developers usually feel lost with modern web technologies and they might think that nowadays it's not possible to implement robust and maintainable web applications without adopting the standard JavaScript-based development stack. But what if I tell you that Java is a powerful platform also for web development and there's no need to switch to different technology?
+When it comes to implement web applications, Java developers usually feel lost with modern web technologies and they might think that nowadays it's not possible to implement robust and maintainable web applications without adopting the standard JavaScript-based development stack. But what if I tell you that Java is a powerful platform also for web development and that you don't need to switch to a different technology?
 
-The following is a list of _howto_ and examples to show you how to use Apache Wicket and other familiar frameworks and tools from Java ecosystem (like Hazelcast, Spring Boot, WebJars, Apache Maven, etc...) to build modern and scalable applications without leaving the Java platform.
+The following is a list of _howto_ and examples that show you how to use Apache Wicket and other familiar frameworks and tools from Java ecosystem (like Hazelcast, Spring Boot, WebJars, Apache Maven, etc...) to build modern and scalable applications without leaving the Java platform.
 
 More in details you will see how to reach the following goals:
 
