@@ -12,13 +12,13 @@ More in details you will see how to reach the following goals:
 - Scaling your application with session clustering and caching
 - Styling your application using SCSS
 
-## Produce resurce-friendly URLs
+### Produce resurce-friendly URLs
 
-## Manage CSS and JavaScript libraries with WebJars and Maven
+### Manage CSS and JavaScript libraries with WebJars and Maven
 
-## Use Spring Boot and Hazelcast to scale your application with session clustering and caching
+### Use Spring Boot and Hazelcast to scale your application with session clustering and caching
 
-## Style your application eith SCSS
+### Style your application eith SCSS
 
 no id mapper
 
