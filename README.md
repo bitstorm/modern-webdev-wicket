@@ -48,6 +48,16 @@ public void init()
 
 ### Manage CSS and JavaScript libraries with WebJars and Maven
 
+WebJars is a project aimed to provide client-side libraries distributions as Maven dependency. Using classpath URLs we can read SCSS files directly from our WebJars dependency. For example let's say we are using the WebJars dependency for Bootstrap 5.3.3:
+
+```xml
+<dependency>
+    <groupId>org.webjars.npm</groupId>
+    <artifactId>bootstrap</artifactId>
+    <version>5.3.3</version>
+</dependency>
+```
+
 init
 
 ```java
