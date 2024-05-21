@@ -14,6 +14,14 @@ More in details you will see how to reach the following goals:
 
 ### Produce resurce-friendly URLs
 
+https://nightlies.apache.org/wicket/guide/10.x/single.html#_generating_structured_and_clear_urls
+
+```java
+mountPage("/pageMount/${requiredParam}/otherSegm/#{optionalParam}", MountedPage.class);
+```
+
+
+
 no id mapper
 
 ```java
