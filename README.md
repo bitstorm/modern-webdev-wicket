@@ -3,7 +3,7 @@
 
 When it comes to implement web applications, Java developers usually feel lost with modern web technologies and they might think that nowadays it's not possible to implement robust and maintainable web applications without adopting the standard JavaScript-based development stack. But what if I tell you that Java is a powerful platform also for web development and that you don't need to switch to a different technology?
 
-The following is a list of _howto_ and examples that show you how to use Apache Wicket and other familiar frameworks and tools from Java ecosystem (like Hazelcast, Spring Boot, WebJars, Apache Maven, etc...) to build modern and scalable applications without leaving the Java platform.
+The following is a list of _howto_ and examples that show you how to use Apache Wicket and other familiar frameworks and tools from the Java ecosystem (like Hazelcast, Spring Boot, WebJars, Apache Maven, etc...) to build modern and scalable applications without leaving the Java platform.
 
 More in details you will see how to reach the following goals:
 
@@ -14,12 +14,21 @@ More in details you will see how to reach the following goals:
 
 ### Produce resurce-friendly URLs
 
-https://nightlies.apache.org/wicket/guide/10.x/single.html#_generating_structured_and_clear_urls
+#### Page mounting
+
+Wicket already comes with a native solution to generate structured and resurce-friendly URLs by mounting pages to a specific path:
 
 ```java
-mountPage("/pageMount/${requiredParam}/otherSegm/#{optionalParam}", MountedPage.class);
+mountPage("/path/ro/page", MountedPage.class);
 ```
 
+The path used for mounted pages can contain also segments with a dynamic value and declared using a special syntax:
+
+```java
+mountPage("/pageMount/${requiredSegment}/otherSegm/#{optionalSegment}", MountedPage.class);
+```
+
+For a full description of page mounting see the related [user guide paragraph](https://nightlies.apache.org/wicket/guide/10.x/single.html#_generating_structured_and_clear_urls)
 
 
 no id mapper
