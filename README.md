@@ -22,10 +22,17 @@ Wicket already comes with a native solution to generate structured and resurce-f
 mountPage("/path/to/page", MountedPage.class);
 ```
 
-The path used for mounted pages can contain also segments with a dynamic value and declared using a special syntax:
+The path used for mounted pages can contain also segments with dynamic values and they are declared using a special syntax:
 
 ```java
-mountPage("/startSegment/${requiredSegment}/otherSegm/#{optionalSegment}", MountedPage.class);
+/*
+ In the following example the path used to mount UserPage has a required parameter (userId) and an optional one (taxId).
+ For example the following path are both valid:
+  - "/user/123/details/ABC1234567"
+  - "/user/123/details"
+*/
+
+mountPage("/user/${userId}/details/#{taxId}", UserPage.class);
 ```
 
 For a full description of page mounting see the related [user guide paragraph](https://nightlies.apache.org/wicket/guide/10.x/single.html#_generating_structured_and_clear_urls)
