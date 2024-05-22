@@ -26,7 +26,8 @@ The path used for mounted pages can contain also segments with dynamic values an
 
 ```java
 /*
- In the following example the path used to mount UserPage has a required parameter (userId) and an optional one (taxId).
+ In the following example the path used to mount UserPage has
+ a required parameter (userId) and an optional one (taxId).
  For example the following path are both valid:
   - "/user/123/details/ABC1234567"
   - "/user/123/details"
