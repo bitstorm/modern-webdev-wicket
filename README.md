@@ -19,13 +19,13 @@ More in details you will see how to reach the following goals:
 Wicket already comes with a native solution to generate structured and resurce-friendly URLs by mounting pages to a specific path:
 
 ```java
-mountPage("/path/ro/page", MountedPage.class);
+mountPage("/path/to/page", MountedPage.class);
 ```
 
 The path used for mounted pages can contain also segments with a dynamic value and declared using a special syntax:
 
 ```java
-mountPage("/pageMount/${requiredSegment}/otherSegm/#{optionalSegment}", MountedPage.class);
+mountPage("/startSegment/${requiredSegment}/otherSegm/#{optionalSegment}", MountedPage.class);
 ```
 
 For a full description of page mounting see the related [user guide paragraph](https://nightlies.apache.org/wicket/guide/10.x/single.html#_generating_structured_and_clear_urls)
