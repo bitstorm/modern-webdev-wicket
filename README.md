@@ -40,7 +40,7 @@ mountPage("/user/${userId}/details/#{taxId}", UserPage.class);
 For a full description of page mounting see the related [user guide paragraph](https://nightlies.apache.org/wicket/guide/10.x/single.html#_generating_structured_and_clear_urls)
 
 
-no id mapper
+#### Remove page id from URL
 
 ```java
 public class NoPageIdMapper extends MountedMapper {
