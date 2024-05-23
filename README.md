@@ -42,6 +42,14 @@ For a full description of page mounting see the related [user guide paragraph](h
 
 #### Remove page id from URL
 
+By default Wicket uses a _versioning_ system for stateful pages assiging a incremental id to each version of the pages. This id is usually appended as query parameter at the end of the page's URL:
+
+```
+www.myhost.net/page-path/?1
+```
+
+Again, for a full description of page versioning see the related [user guide paragraph](https://nightlies.apache.org/wicket/guide/10.x/single.html#_page_versioning_and_caching)
+
 ```java
 public class NoPageIdMapper extends MountedMapper {
 
@@ -77,6 +85,12 @@ public void init()
 WebJars is a project aimed to provide client-side libraries distributions as Maven dependency. Using classpath URLs we can read SCSS files directly from our WebJars dependency. For example let's say we are using the WebJars dependency for Bootstrap 5.3.3:
 
 ```xml
+<dependency>
+    <groupId>de.agilecoders.wicket.webjars</groupId>
+    <artifactId>wicket-webjars</artifactId>
+    <version>4.0.3</version>
+</dependency>
+
 <dependency>
     <groupId>org.webjars.npm</groupId>
     <artifactId>bootstrap</artifactId>
