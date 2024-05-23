@@ -45,10 +45,12 @@ For a full description of page mounting see the related [user guide paragraph](h
 By default Wicket uses a _versioning_ system for stateful pages assiging a incremental id to each version of the pages. This id is usually appended as query parameter at the end of the page's URL:
 
 ```
-www.myhost.net/page-path/?1
+www.myhost.net/page-path?1234
 ```
 
 Again, for a full description of page versioning see the related [user guide paragraph](https://nightlies.apache.org/wicket/guide/10.x/single.html#_page_versioning_and_caching)
+
+Usually having this id at the end of the page URL is not a big deal, but sometimes you might prefer simply hiding it in the final URL.  
 
 ```java
 public class NoPageIdMapper extends MountedMapper {
