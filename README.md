@@ -68,10 +68,9 @@ public class NoPageIdMapper extends MountedMapper {
 
     }
 }
-
+```
 Please note that this mapper will remove version id only for page URLs, so stateful behaviors (like AJAX behaviors) will continue to work as usual.  
 
-```
 no id mapper use
 
 
