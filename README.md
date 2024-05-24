@@ -48,7 +48,8 @@ By default Wicket uses a _versioning_ system for stateful pages assiging a incre
 www.myhost.net/page-path?1234
 ```
 
-The purpose of page versioning is to support browser’s back button: when this button is pressed Wicket must respond by rendering the same page instance previously used. Again, for a full description of this mechanism see the related [user guide paragraph](https://nightlies.apache.org/wicket/guide/10.x/single.html#_page_versioning_and_caching)
+The purpose of page versioning is to support browser’s back button: when this button is pressed Wicket must respond by rendering the same page instance previously used.
+Again, for a full description of this mechanism see the related [user guide paragraph](https://nightlies.apache.org/wicket/guide/10.x/single.html#_page_versioning_and_caching)
 
 Usually having this id at the end of the page URL is not a big deal, but sometimes you might prefer simply hiding it in the final URL.  
 
@@ -71,8 +72,7 @@ public class NoPageIdMapper extends MountedMapper {
 ```
 Please note that this mapper will remove version id only for page URLs, so stateful behaviors (like AJAX behaviors) will continue to work as usual.  
 
-no id mapper use
-
+Once we created our custom mapper we must use it to mount our pages: 
 
 ```java
 public void init()
