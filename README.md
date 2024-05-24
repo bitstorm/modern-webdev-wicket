@@ -85,7 +85,7 @@ public void init()
 ```
 
 > [!WARNING]
-> By removing the page id from URL you will lost the browser’s back button support.
+> Keep in mind that by removing the page id from URL you will lost the browser’s back button support.
 
 ### Manage CSS and JavaScript libraries with WebJars and Maven
 
