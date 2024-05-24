@@ -48,7 +48,7 @@ By default Wicket uses a _versioning_ system for stateful pages assiging a incre
 www.myhost.net/page-path?1234
 ```
 
-Again, for a full description of page versioning see the related [user guide paragraph](https://nightlies.apache.org/wicket/guide/10.x/single.html#_page_versioning_and_caching)
+The purpose of page versioning is to support browser’s back button: when this button is pressed Wicket must respond by rendering the same page instance previously used. Again, for a full description of this mechanism see the related [user guide paragraph](https://nightlies.apache.org/wicket/guide/10.x/single.html#_page_versioning_and_caching)
 
 Usually having this id at the end of the page URL is not a big deal, but sometimes you might prefer simply hiding it in the final URL.  
 
