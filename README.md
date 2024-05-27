@@ -8,7 +8,7 @@ The following is a list of _howto_ and examples that show you how to use Apache 
 More in details you will see how to reach the following goals:
 
 - Producing clean and resurce-friendly URLs
-- Managing CSS and JavaScript resources with WebJars and Maven
+- Managing CSS and JavaScript resources with WebJars and Maven (project wicket-webjars)
 - Scaling your application with session clustering and caching
 - Styling your application using SCSS
 
@@ -91,7 +91,7 @@ public void init()
 
 WebJars is a project aimed to provide client-side libraries distributions as Maven dependency. In this way these libraries can be read directly from JAR files as regular dependecies. WebJars comes with numerous Java libraries to easily integrate this framework with the most popular web frameworks, Wicket included.
 
-For example let's say we want to use Bootstrap 5.3.3 in our Wicket application. The first step is to include the following dependecies in our pom.xml:
+For example (project wicket-webjars) let's say we want to use Bootstrap 5.3.3 in our Wicket application. The first step is to include the following dependecies in our pom.xml:
 
 ```xml
 <dependency>
