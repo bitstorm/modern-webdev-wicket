@@ -89,9 +89,9 @@ public void init()
 
 ### Manage CSS and JavaScript libraries with WebJars and Maven
 
-WebJars is a project aimed to provide client-side libraries distributions as Maven dependency. In this way these libraries can be read directly from JAR files as regular dependecies. In addition there are already numerous Java libraries meant to integrate WebJars with the most popular web frameworks, Wicket included. 
+WebJars is a project aimed to provide client-side libraries distributions as Maven dependency. In this way these libraries can be read directly from JAR files as regular dependecies. WebJars comes with numerous Java libraries to easily integrate this framework with the most popular web frameworks, Wicket included.
 
-For example let's say we are using the WebJars dependency for Bootstrap 5.3.3:
+For example let's say we want to use Bootstrap 5.3.3 in our Wicket application. The first step is to include the following dependecies in our pom.xml:
 
 ```xml
 <dependency>
@@ -107,14 +107,15 @@ For example let's say we are using the WebJars dependency for Bootstrap 5.3.3:
 </dependency>
 ```
 
-init
+The first dependency is the library that allows to use WebJars with Wicket while the second is the Bootstrap library distributed by WebJars project.
+The second configuration step is the initialization of wicket-webjars library with the following simple code line in our application _init()_ method:
 
 ```java
 public void init()
 {
 	super.init();
 
-	// add your configuration here
+	// init wicket-webjars library
 	WicketWebjars.install(this);
 }
 ```
