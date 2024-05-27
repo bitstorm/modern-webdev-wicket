@@ -133,7 +133,7 @@ public void renderHead(IHeaderResponse response) {
 }
 ```
 
-The path used with _WebjarsCssResourceReference_ is appendend to _META-INF/resources/webjars/_ to obtain the path to the desired file inside the library jar. See the [official WebJars site](https://www.webjars.org) to see the content of jar libraries.
+The path used with _WebjarsCssResourceReference_ is appendend to _META-INF/resources/webjars/_ to obtain the path to the desired file inside the library jar. See the [official WebJars site](https://www.webjars.org) to have a look at the content of jar libraries.
 
 To automatically use the version of a WebJar library from your pom.xml, we can simply replace the version in path with the _current_ string. When a resource name is resolved this string will be replaced with the most recent available version in classpath: 
 
