@@ -120,7 +120,23 @@ public void init()
 }
 ```
 
-renderHead
+Now we can add Bootstrap to our page as Wicket CssHeaderItem using refernce class _WebjarsCssResourceReference_
+
+```java
+@Override
+public void renderHead(IHeaderResponse response) {
+	super.renderHead(response);
+
+	response.render(CssHeaderItem.forReference(
+               new WebjarsCssResourceReference("bootstrap/5.3.3/css/bootstrap.min.css")));
+
+}
+```
+
+The path used with _WebjarsCssResourceReference_ is appendend to _META-INF/resources/webjars/_ to obtain the path to the desired file inside the library jar. See the [official WebJars site](https://www.webjars.org) to see the content of jar libraries.
+
+To automatically use the version of a WebJar library from your pom.xml, we can simply replace the version in path with the _current_ string. When a resource name is resolved this string will be replaced with the most recent available version in classpath: 
+
 
 ```java
 @Override
@@ -132,7 +148,6 @@ public void renderHead(IHeaderResponse response) {
 
 }
 ```
-
 
 ### Use Spring Boot and Hazelcast to scale your application with session clustering and caching
 
