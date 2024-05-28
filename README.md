@@ -238,6 +238,28 @@ public class HazelcastConfig {
 }
 ```
 
+hazelcast page mapper
+
+```java
+@Override
+public void init()
+{
+	super.init();
+
+	// add your configuration here
+	HazelcastInstance instance = getApplicationContext().getBean(HazelcastInstance.class);
+
+	setPageManagerProvider(new DefaultPageManagerProvider(this) {
+	    @Override
+	    protected IPageStore newPersistentStore() {
+		HazelcastDataStore hazelcastDataStore = new HazelcastDataStore(getName(), instance);
+	
+		return new SessionQuotaManagingDataStore(hazelcastDataStore, 4);
+	    }
+	});
+}
+```
+
 Hazelcast start
 
 ```
