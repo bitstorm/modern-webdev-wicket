@@ -149,6 +149,15 @@ public void renderHead(IHeaderResponse response) {
 }
 ```
 
+It is also possible to use a resource directly from html markup prepending _/webjars/_ to the resource path:
+
+```html
+<link rel='stylesheet' href='/webjars/bootstrap/5.3.3/css/bootstrap.min.css'>
+```
+
+> [!WARNING]
+> If you are using Jetty embedded resource can be used from html only from version 12.
+
 ### Use Spring Boot and Hazelcast to scale your application with session clustering and caching
 
 xml hazelcast
