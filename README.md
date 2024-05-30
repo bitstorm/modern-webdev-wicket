@@ -160,7 +160,7 @@ It is also possible to use a resource directly from html markup prepending _/web
 
 ### Use Spring Boot and Hazelcast to scale your application with session clustering and caching
 
-Scaling a web application is not a trivial task and it usually involves a lot of work on additional architetcural aspects such as caching, services orchestration and replication, etc...
+Scaling a web application is not a trivial task and it usually involves a lot of work on additional architetcural aspects such as caching, services orchestration and replication, etc... Java developers can count on different valuable frameworks that can dramatically help handling those aspects providing a distributed data storage that can be used both as caching servrice and chordinator between two or more JVM. One of these framework is [Hazelcast](https://hazelcast.com/) which can be used also for web session clustering. In this example we will see how to use integrate Wicket with Spring Boot and Hazelcast to share and replicate web session among two or more server instances making our application fault tollerant and scalable.     
 
 
 ```xml
