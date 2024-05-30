@@ -203,7 +203,7 @@ Our application is a Spring Boot-based web application using Apache Wicket. Let'
 </dependency>
 ```
 
-The main dependency is probably the one on [Wicket and Spring Boot integration project](https://github.com/MarcGiffing/wicket-spring-boot) (artifactId _wicket-spring-boot-starter_) 
+The main dependency is probably the one on [Wicket and Spring Boot integration project](https://github.com/MarcGiffing/wicket-spring-boot) (artifactId _wicket-spring-boot-starter_) which lay the foundation for our application.
 
 java hazelcast
 
