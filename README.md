@@ -160,7 +160,8 @@ It is also possible to use a resource directly from html markup prepending _/web
 
 ### Use Spring Boot and Hazelcast to scale your application with session clustering and caching
 
-xml hazelcast
+Scaling a web application is not a trivial task and it usually involves a lot of work on additional architetcural aspects such as caching, services orchestration and replication, etc...
+
 
 ```xml
 <!-- SESSION REPLICATION -->
