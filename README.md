@@ -160,7 +160,12 @@ It is also possible to use a resource directly from html markup prepending _/web
 
 ### Use Spring Boot and Hazelcast to scale your application with session clustering and caching
 
-Scaling a web application is not a trivial task and it usually involves a lot of work on additional architectural aspects such as caching, services orchestration and replication, etc... Java developers can count on different valuable frameworks that can dramatically help handling those aspects providing a distributed data storage that can be used both as caching service and coordinator between two or more JVM. One of these framework is [Hazelcast](https://hazelcast.com/) which can be used also for web session clustering. In this example we will see how to use integrate Wicket with Spring Boot and Hazelcast to share and replicate web session among two or more server instances making our application fault tolerant and scalable.
+Scaling a web application is not a trivial task and it usually involves a lot of work on additional architectural aspects such as caching, services orchestration and replication, etc... Java developers can count on different valuable frameworks that can dramatically help handling those aspects providing a distributed data storage that can be used both as caching service and coordinator between two or more JVM. One of these framework is [Hazelcast](https://hazelcast.com/) which can be used also for web session clustering. 
+
+In this example (project _wicket-hazelcast_) we will see how to use integrate Wicket with Spring Boot and Hazelcast to share and replicate web session among two or more server instances making our application fault tolerant and scalable.
+
+Our application is a Spring Boot-based web application using Apache Wicket. Let's see the required dependecies to our pom.xml:
+
 
 ```xml
 <!-- SESSION REPLICATION -->
@@ -190,13 +195,15 @@ Scaling a web application is not a trivial task and it usually involves a lot of
     <version>10.0.0</version>
 </dependency>
 
-<!-- SPRING HAZELCAST INTEGRATION (optional, for caching) -->
+<!-- SPRING HAZELCAST INTEGRATION (for caching) -->
 <dependency>
     <groupId>com.hazelcast</groupId>
     <artifactId>hazelcast-spring</artifactId>
     <version>5.3.6</version>
 </dependency>
 ```
+
+The main dependency is probably the one on [Wicket and Spring Boot integration project](https://github.com/MarcGiffing/wicket-spring-boot) (artifactId _wicket-spring-boot-starter_) 
 
 java hazelcast
 
