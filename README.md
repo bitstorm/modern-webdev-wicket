@@ -204,8 +204,10 @@ Our application is a Spring Boot-based web application using Apache Wicket. Let'
 ```
 
 The main dependency is probably the one on [Wicket and Spring Boot integration project](https://github.com/MarcGiffing/wicket-spring-boot) (artifactId _wicket-spring-boot-starter_) which lay the foundation for our application.
+The other dependencies are for Hazelcast integration with Spring and Wicket and for web session clustering.
 
-java hazelcast
+Now let's look at the code starting with the configuration required to create an _HazelcastConfig_ instance for our application. This is basically the code used in the official [Hazelcast tutorial](https://docs.hazelcast.com/tutorials/spring-session-hazelcast)
+
 
 ```java
 @Configuration
@@ -245,6 +247,8 @@ public class HazelcastConfig {
 
 }
 ```
+
+Please note that the two annotation used in the class above, one enable session clustering with Hazelcast (_@EnableHazelcastHttpSession_) and another to enable Spring caching support (_@EnableCaching_) backed by Hazelcast. Spring caching requires to create a bean of type _CacheManager_
 
 hazelcast page mapper
 
