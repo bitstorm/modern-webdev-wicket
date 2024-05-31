@@ -250,6 +250,9 @@ public class HazelcastConfig {
 
 Please note that the two annotation used in the class above, one enable session clustering with Hazelcast (_@EnableHazelcastHttpSession_) and another to enable Spring caching support (_@EnableCaching_) backed by Hazelcast. Spring caching requires to create a bean of type _CacheManager_
 
+> [!NOTE]
+> Spring caching is enabled only for illustration purpose as it's not used in the example code.
+
 hazelcast page mapper
 
 ```java
