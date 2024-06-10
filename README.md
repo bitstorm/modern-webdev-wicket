@@ -257,7 +257,7 @@ In the class above we used two annotation (beside _@Configuration_), one to enab
 > Please note that for sake of semplicity we enabled multicast for autodiscovery, so Hazelcast will automatically add to the cluster any new application instance visible on our local network. Keep in mind that multicast is usually not suited for production enviorment where a safier join configuration is usually required. See the [Hazelcast documentation](https://docs.hazelcast.com/hazelcast/5.4/clusters/network-configuration) for more information on network configuration.
 
 
-As final configuration step we must tell Wicket to store statefull page instances using Hazelcast. This is done inside Application _init()_ method registering a custom _PAgeManagerProvider_ using class _HazelcastDataStore_ from WicketStuff project. We also use class _SessionQuotaManagingDataStore_ to limit page storing to max 5 instances per session:
+As final configuration step we must tell Wicket to store statefull page instances using Hazelcast. This is done inside Application _init()_ method registering a custom _PAgeManagerProvider_ using class _HazelcastDataStore_ from WicketStuff project. We also use class _SessionQuotaManagingDataStore_ to limit page storing to max 4 instances per session:
 
 ```java
 @Override
