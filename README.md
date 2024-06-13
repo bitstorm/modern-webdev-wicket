@@ -315,7 +315,7 @@ Members {size:2, ver:2} [
 ```
 
 Opening our browser at [http://localhost:8084](http://localhost:8084) we should have the confirm that the new instance is using the same session with the same id.
-
+Feel free to play around stopping/restarting one of the two instances at a time to see that the session isn't lost as long as one instance is still active. 
 
 ### Style your application eith SCSS
 
