@@ -319,8 +319,9 @@ Feel free to play around stopping/restarting one of the two instances at a time 
 
 ### Style your application eith SCSS
 
-scss pom
+When it comes to web application styling, SCSS is a precious ally as it allows to use a more advanced syntax to manage and organize our css resources. Since SCSS needs to be converted in standard CSS language, we need a compiler to perform this task. 
 
+In attition to the dependencies seen for example project wicket-webjar we will use module _wicket-bootstrap-sass_ that comes with a scss compiler.
 ```xml
 <dependency>
     <groupId>de.agilecoders.wicket.webjars</groupId>
@@ -366,4 +367,17 @@ protected final CssReferenceHeaderItem customCss =
 public void renderHead(IHeaderResponse response) {
     response.render(customCss);
 }
-```    
+```
+
+custom scss
+
+```scss
+//SCSS VARIABLE OVERRIDING
+$primary: #397EB4;
+$warning: #f19027;
+$min-contrast-ratio: 3;
+
+
+//INCLUDING MAIN BOOTSTRAP SCSSS
+@import "webjars!bootstrap/current/scss/bootstrap.scss";
+```
