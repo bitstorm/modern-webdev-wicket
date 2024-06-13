@@ -279,11 +279,43 @@ public void init()
 }
 ```
 
-Hazelcast start
+With all configuration code in place we can start our application with the following command (assuming port 8083 is free on our machine).
 
 ```
-SERVER_PORT=8080 mvn spring-boot:run
+SERVER_PORT=8083 mvn spring-boot:run
 ```
+
+Taking a look at our application logs we can see a message from Hazelcast confirming that a new cluster has been created and the application has successfully joined it:
+
+```
+2024-06-13 11:39:30.169 [main] INFO  com.hazelcast.core.LifecycleService - [10.3.0.8]:5702 [dev] [5.3.6] [10.3.0.8]:5702 is STARTING
+2024-06-13 11:39:32.835 [main] INFO  c.h.internal.cluster.ClusterService - [10.3.0.8]:5702 [dev] [5.3.6] 
+
+Members {size:1, ver:1} [
+	Member [10.3.0.8]:5702 - 9cf568db-8106-40d0-8463-6ca2d2082eb6 this
+]
+```
+
+Once the application is up we can open our browser at [http://localhost:8083](http://localhost:8083) and check the given sessionId value. Now let's start a second instance of our application. We expect it tojoin the existing cluster and using the same shared web session. The application can be started with the same command seen above but using a different available port:
+
+```
+SERVER_PORT=8084 mvn spring-boot:run
+```
+
+Again, looking at the logs of both this new instance or the existing one we should see that the new one has joined the cluster:
+
+```
+2024-06-13 11:51:35.757 [hz.gallant_kapitsa.IO.thread-in-0] INFO  c.h.i.server.tcp.TcpServerConnection - [10.3.0.8]:5703 [dev] [5.3.6] Initialized new cluster connection between /10.3.0.8:43349 and /10.3.0.8:5702
+2024-06-13 11:51:41.000 [hz.gallant_kapitsa.priority-generic-operation.thread-0] INFO  c.h.internal.cluster.ClusterService - [10.3.0.8]:5703 [dev] [5.3.6] 
+
+Members {size:2, ver:2} [
+	Member [10.3.0.8]:5702 - 9cf568db-8106-40d0-8463-6ca2d2082eb6
+	Member [10.3.0.8]:5703 - bf396942-563d-4750-a0ba-0bac3e241fc8 this
+]
+```
+
+Opening our browser at [http://localhost:8084](http://localhost:8084) we should have the confirm that the new instance is using the same session with the same id.
+
 
 ### Style your application eith SCSS
 
