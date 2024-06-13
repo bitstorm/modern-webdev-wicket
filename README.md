@@ -319,7 +319,7 @@ Feel free to play around stopping/restarting one of the two instances at a time 
 
 ### Style your application eith SCSS
 
-When it comes to web application styling, SCSS is a precious ally as it allows to use a more advanced syntax to manage and organize our css resources. Since SCSS needs to be converted in standard CSS language, we need a compiler to perform this task. 
+When it comes to web application styling, SCSS is a precious ally as it allows to use a more advanced syntax to manage and organize our css resources. Since SCSS needs to be converted in standard CSS language, we need a compiler to perform this task. For developers it would be even better if this compiler could operate "live", automatically compiling SCSS sources as they are modified.
 
 In attition to the dependencies seen for example project wicket-webjar we will use module _wicket-bootstrap-sass_ that comes with a scss compiler.
 ```xml
