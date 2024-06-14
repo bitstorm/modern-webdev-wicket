@@ -91,7 +91,7 @@ public void init()
 
 WebJars is a project aimed to provide client-side libraries distributions as Maven dependency. In this way these libraries can be read directly from JAR files as regular dependecies. WebJars comes with numerous Java libraries to easily integrate this framework with the most popular web frameworks, Wicket included.
 
-For example (project wicket-webjars) let's say we want to use Bootstrap 5.3.3 in our Wicket application. The first step is to include the following dependecies in our pom.xml:
+For example (project _wicket-webjars_) let's say we want to use Bootstrap 5.3.3 in our Wicket application. The first step is to include the following dependecies in our pom.xml:
 
 ```xml
 <dependency>
@@ -319,9 +319,13 @@ Feel free to play around stopping/restarting one of the two instances at a time 
 
 ### Style your application with SCSS
 
-When it comes to web application styling, SCSS is a precious ally as it allows to use a more advanced syntax to manage and organize our css resources. Since SCSS needs to be converted in standard CSS language, we need a compiler to perform this task. For developers it would be even better if this compiler could operate "live", automatically compiling SCSS sources as they are modified.
+When it comes to web application styling, SCSS is a precious ally as it allows to use a more advanced syntax to manage and organize our css resources. Since SCSS needs to be converted in standard CSS language, we need a compiler to perform this task. \
+For developers it would be even better if this compiler could operate "live", automatically compiling SCSS sources as they are modified. Most of the time this time of compiler requires to use a dedicated external application or some kind of IDE extention to monitor our SCSS files and recompile them as they get modified. \
+With Wicket we can use library _wicket-bootstrap-sass_ that offers an even more flexible solution in the form of [CSS resource](https://nightlies.apache.org/wicket/guide/10.x/single.html#_resource_management_with_wicket) that points to a SCSS file and compiles it on the fly.
 
+Example project _wicket-scss_ uses both library _wicket-bootstrap-sass_ and _WebJars_ to show how to easily customize Bootstrap 5 style using a SCSS file that extends the default _bootstrap.scss_ file distributed as WebJars dependency. /
 In attition to the dependencies seen for example project wicket-webjar we will use module _wicket-bootstrap-sass_ that comes with a scss compiler.
+
 ```xml
 <dependency>
     <groupId>de.agilecoders.wicket.webjars</groupId>
