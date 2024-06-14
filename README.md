@@ -1,7 +1,7 @@
 # Modern Web development with Apache Wicket
 
 
-When it comes to implement web applications, Java developers usually feel lost with modern web technologies and they might think that nowadays it's not possible to implement robust and maintainable web applications without adopting the standard JavaScript-based development stack. But what if I tell you that Java is a powerful platform also for web development and that you don't need to switch to a different technology?
+When it comes to implement web applications, Java developers usually feel lost with modern web technologies and they might think that nowadays it's not possible to implement robust and maintainable web applications without adopting the standard JavaScript-based development stack. But what if I tell you that Java is a first-class platform also for web development and that you don't need to switch to a different technology?
 
 The following is a list of _howto_ and example projects that show you how to use Apache Wicket and other familiar frameworks and tools from the Java ecosystem (like Hazelcast, Spring Boot, WebJars, Apache Maven, etc...) to build modern and scalable applications without leaving the Java platform.
 
@@ -317,7 +317,7 @@ Members {size:2, ver:2} [
 Opening our browser at [http://localhost:8084](http://localhost:8084) we should have the confirm that the new instance is using the same session with the same id.
 Feel free to play around stopping/restarting one of the two instances at a time to see that the session isn't lost as long as one instance is still active. 
 
-### Style your application eith SCSS
+### Style your application with SCSS
 
 When it comes to web application styling, SCSS is a precious ally as it allows to use a more advanced syntax to manage and organize our css resources. Since SCSS needs to be converted in standard CSS language, we need a compiler to perform this task. For developers it would be even better if this compiler could operate "live", automatically compiling SCSS sources as they are modified.
 
