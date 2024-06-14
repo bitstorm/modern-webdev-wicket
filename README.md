@@ -327,7 +327,8 @@ With Wicket we can use library _wicket-bootstrap-sass_ that offers an even more 
 > [!NOTE]
 > Library _wicket-bootstrap-sass_ depends on OS library [libsass](https://github.com/sass/libsass), so be sure to have it already installed before running the following example code.
 
-Example project _wicket-scss_ uses both library _wicket-bootstrap-sass_ and _WebJars_ to show how to easily customize Bootstrap 5 style using a SCSS file that extends the default _bootstrap.scss_ file distributed as WebJars dependency. /
+Example project _wicket-scss_ uses both library _wicket-bootstrap-sass_ and _WebJars_ to show how to easily customize Bootstrap 5 style using a SCSS file that extends the default _bootstrap.scss_ file distributed as WebJars dependency.
+
 In attition to the dependencies seen for example project wicket-webjar we will use module _wicket-bootstrap-sass_ that comes with a scss compiler.
 
 ```xml
