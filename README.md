@@ -108,7 +108,7 @@ For example (project _wicket-webjars_) let's say we want to use Bootstrap 5.3.3 
 ```
 
 The first dependency is the library that allows to use WebJars with Wicket while the second is the Bootstrap library distributed by WebJars project.
-The second configuration step is the initialization of wicket-webjars library with the following simple code line in our application _init()_ method:
+The second configuration step is the initialization of _wicket-webjars_ library with the following simple code line in our application _init()_ method:
 
 ```java
 public void init()
@@ -327,9 +327,9 @@ With Wicket we can use library _wicket-bootstrap-sass_ that offers an even more 
 > [!NOTE]
 > Library _wicket-bootstrap-sass_ depends on OS library [libsass](https://github.com/sass/libsass), so be sure to have it already installed before running the following example code.
 
-Example project _wicket-scss_ uses both library _wicket-bootstrap-sass_ and _WebJars_ to show how to easily customize Bootstrap 5 style using a SCSS file that extends the default _bootstrap.scss_ file distributed as WebJars dependency.
+Example project _wicket-scss_ uses both library _wicket-bootstrap-sass_ and _WebJars_ to show how to easily customize Bootstrap 5 style using a SCSS file that extends the default _bootstrap.scss_ file distributed with WebJars dependency.
 
-In attition to the dependencies seen for example project wicket-webjar we will use module _wicket-bootstrap-sass_ that comes with a scss compiler.
+The project has the same dependencies seen for project _wicket-webjar_ in addition to module _wicket-bootstrap-sass_:
 
 ```xml
 <dependency>
@@ -351,7 +351,7 @@ In attition to the dependencies seen for example project wicket-webjar we will u
 </dependency>
 ```
 
-scss init
+In our application's _init()_ method we initialize both WebJars and SASS integration: 
 
 ```java
 @Override
@@ -364,6 +364,21 @@ public void init()
     WicketWebjars.install(this);
     BootstrapSass.install(this);
 }
+
+
+
+```
+custom scss
+
+```scss
+//SCSS VARIABLE OVERRIDING
+$primary: #397EB4;
+$warning: #f19027;
+$min-contrast-ratio: 3;
+
+
+//INCLUDING MAIN BOOTSTRAP SCSSS
+@import "webjars!bootstrap/current/scss/bootstrap.scss";
 ```
 
 scss resource
@@ -376,17 +391,4 @@ protected final CssReferenceHeaderItem customCss =
 public void renderHead(IHeaderResponse response) {
     response.render(customCss);
 }
-```
-
-custom scss
-
-```scss
-//SCSS VARIABLE OVERRIDING
-$primary: #397EB4;
-$warning: #f19027;
-$min-contrast-ratio: 3;
-
-
-//INCLUDING MAIN BOOTSTRAP SCSSS
-@import "webjars!bootstrap/current/scss/bootstrap.scss";
 ```
