@@ -12,6 +12,9 @@ More in details you will see how to reach the following goals:
 - Scaling your application with session clustering and caching
 - Styling your application using SCSS
 
+> [!NOTE]
+> The following examples are based on Wicket 10 and Java 21, although they should work also for Wicket 9 and Java 17
+
 ### Produce resurce-friendly URLs
 
 #### Page mounting
