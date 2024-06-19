@@ -156,7 +156,9 @@ It is also possible to use a resource directly from html markup prepending _/web
 ```
 
 > [!WARNING]
-> If you are using Jetty embedded resource can be used from html only from version 12.
+> If you are using Jetty remember that resource can be used from html only from version 12.
+
+The project can be started with command `mvn jetty:run`. The page can be seen opening your browser at [http://localhost:8080](http://localhost:8080)
 
 ### Use Spring Boot and Hazelcast to scale your application with session clustering and caching
 
