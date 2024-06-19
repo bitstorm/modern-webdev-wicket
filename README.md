@@ -360,15 +360,13 @@ public void init()
     super.init();
 
    
-    // add your configuration here
+    // init wicket WebJars and SASS library
     WicketWebjars.install(this);
     BootstrapSass.install(this);
 }
-
-
-
 ```
-custom scss
+
+Next, let's have alook at the file _custom-css.scss_ we will use to customize our Boostrap 5 based theme:
 
 ```scss
 //SCSS VARIABLE OVERRIDING
@@ -381,7 +379,10 @@ $min-contrast-ratio: 3;
 @import "webjars!bootstrap/current/scss/bootstrap.scss";
 ```
 
-scss resource
+The file has a starting section where we override some of the Bootstrap variables (see [official documentation](https://getbootstrap.com/docs/5.0/customize/sass/#modify-map)) to customize colors for primary and warning buttons. \
+The last line imports the main Bootstrap 5.3.3 SCSS which is loaded from the corresponding WebJar using the syntax _webjars!<path_to_file>_
+
+Finally, our file _custom-css.scss_ can be used as regular Wicket CSS header item using class _SassResourceReference_ that takes care of compilation behind the scenes:
 
 ```java
 protected final CssReferenceHeaderItem customCss = 
@@ -392,3 +393,5 @@ public void renderHead(IHeaderResponse response) {
     response.render(customCss);
 }
 ```
+
+Once the application is started you can play around modifying file _custom-css.scss_ and seeing changes in real time.
