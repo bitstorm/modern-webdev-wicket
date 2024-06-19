@@ -394,4 +394,4 @@ public void renderHead(IHeaderResponse response) {
 }
 ```
 
-Once the application is started you can play around modifying file _custom-css.scss_ and seeing changes in real time.
+Once the application is started you can play around modifying file _custom-css.scss_ and see changes in real time.
