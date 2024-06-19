@@ -366,7 +366,7 @@ public void init()
 }
 ```
 
-Next, let's have alook at the file _custom-css.scss_ we will use to customize our Boostrap 5 based theme:
+Next, let's have a look at the file _custom-css.scss_ we will use to customize our Boostrap 5 based theme:
 
 ```scss
 //SCSS VARIABLE OVERRIDING
