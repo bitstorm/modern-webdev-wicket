@@ -259,10 +259,10 @@ In the class above we used two annotation (beside _@Configuration_), one to enab
 > Spring caching is enabled only for illustration purpose as it's not used in the example code. However with a _CacheManager_ bean created, you can use Spring annotations to [cache the results of you services](https://www.baeldung.com/spring-cache-tutorial).
 
 > [!WARNING]
-> Please note that for sake of semplicity we enabled multicast for autodiscovery, so Hazelcast will automatically add to the cluster any new application instance visible on our local network. Keep in mind that multicast is usually not suited for production enviorment where a safier join configuration is usually required. See the [Hazelcast documentation](https://docs.hazelcast.com/hazelcast/5.4/clusters/network-configuration) for more information on network configuration.
+> Please note that for sake of simplicity we enabled multicast for autodiscovery, so Hazelcast will automatically add to the cluster any new application instance visible on our local network. Keep in mind that multicast is usually not suited for production environment where a safer join configuration is usually required. See the [Hazelcast documentation](https://docs.hazelcast.com/hazelcast/5.4/clusters/network-configuration) for more information on network configuration.
 
 
-As final configuration step we must tell Wicket to store statefull page instances using Hazelcast. This is done inside Application _init()_ method registering a custom _PAgeManagerProvider_ using class _HazelcastDataStore_ from WicketStuff project. We also use class _SessionQuotaManagingDataStore_ to limit page storing to max 4 instances per session:
+As final configuration step we must tell Wicket to store statefull page instances using Hazelcast. This is done inside Application _init()_ method registering a custom _PageManagerProvider_ using class _HazelcastDataStore_ from WicketStuff project. We also use class _SessionQuotaManagingDataStore_ to limit page storing to max 4 instances per session:
 
 ```java
 @Override
