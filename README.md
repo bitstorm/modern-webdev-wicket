@@ -15,11 +15,11 @@ More in details you will see how to reach the following goals:
 > [!NOTE]
 > The following examples are based on Wicket 10 and Java 21, although they should work also for Wicket 9 and Java 17
 
-### Produce resurce-friendly URLs
+### Produce resource-friendly URLs
 
 #### Page mounting
 
-Wicket already comes with a native solution to generate structured and resurce-friendly URLs by mounting pages to a specific path:
+Wicket already comes with a native solution to generate structured and resource-friendly URLs by mounting pages to a specific path:
 
 ```java
 mountPage("/path/to/page", MountedPage.class);
@@ -123,7 +123,7 @@ public void init()
 }
 ```
 
-Now we can add Bootstrap to our page as Wicket CssHeaderItem using refernce class _WebjarsCssResourceReference_
+Now we can add Bootstrap to our page as Wicket CssHeaderItem using reference class _WebjarsCssResourceReference_
 
 ```java
 @Override
@@ -208,7 +208,7 @@ Our application is a Spring Boot-based web application using Apache Wicket. Let'
 </dependency>
 ```
 
-The main dependency is probably the one on [Wicket and Spring Boot integration project](https://github.com/MarcGiffing/wicket-spring-boot) (artifactId _wicket-spring-boot-starter_) which lay the foundation for our application.
+The main dependency is probably the one on [Wicket and Spring Boot integration project](https://github.com/MarcGiffing/wicket-spring-boot) (artifactId _wicket-spring-boot-starter_) which lays the foundation for our application.
 The other dependencies are for Hazelcast integration with Spring and Wicket and for web session clustering.
 
 Now let's look at the code starting with the configuration required to create an _HazelcastConfig_ instance for our application. This is basically the code used in the official [Hazelcast tutorial](https://docs.hazelcast.com/tutorials/spring-session-hazelcast)
