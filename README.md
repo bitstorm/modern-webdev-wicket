@@ -1,4 +1,4 @@
-# Modern Web development with Apache Wicket
+# Modern Web development with Apache Wicket, Spring Boot, Hazelcast and WebJars
 
 
 When it comes to implement web applications, Java developers usually feel lost with modern web technologies and they might think that nowadays it's not possible to implement robust and maintainable web applications without adopting the standard JavaScript-based development stack. But what if I tell you that Java is a first-class platform also for web development and that you don't need to switch to a different technology?
