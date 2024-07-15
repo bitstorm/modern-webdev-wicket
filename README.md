@@ -7,7 +7,7 @@ The following is a list of _howto_ and example projects that show you how to use
 
 More in details you will see how to reach the following goals:
 
-- Producing clean and resurce-friendly URLs
+- [Producing clean and resurce-friendly URLs](#produce-resource-friendly-urls)
 - Managing CSS and JavaScript resources with WebJars and Maven (project wicket-webjars)
 - Scaling your application with session clustering and caching
 - Styling your application using SCSS
@@ -15,7 +15,7 @@ More in details you will see how to reach the following goals:
 > [!NOTE]
 > The following examples are based on Wicket 10 and Java 21, although they should work also for Wicket 9 and Java 17
 
-### Produce resource-friendly URLs
+## Produce resource-friendly URLs
 
 #### Page mounting
 
@@ -90,7 +90,7 @@ public void init()
 > [!WARNING]
 > Keep in mind that by removing the page id from URL you will lost the browser’s back button support.
 
-### Manage CSS and JavaScript libraries with WebJars and Maven
+## Manage CSS and JavaScript libraries with WebJars and Maven
 
 WebJars is a project aimed to provide client-side libraries distributions as Maven dependency. In this way these libraries can be read directly from JAR files as regular dependecies. WebJars comes with numerous Java libraries to easily integrate this framework with the most popular web frameworks, Wicket included.
 
@@ -163,7 +163,7 @@ It is also possible to use a resource directly from html markup prepending _/web
 
 The project can be started with command `mvn jetty:run`. The page can be seen opening your browser at [http://localhost:8080](http://localhost:8080)
 
-### Use Spring Boot and Hazelcast to scale your application with session clustering and caching
+## Use Spring Boot and Hazelcast to scale your application with session clustering and caching
 
 Scaling a web application is not a trivial task and it usually involves a lot of work on additional architectural aspects such as caching, services orchestration and replication, etc... Java developers can count on different valuable frameworks that can dramatically help handling those aspects providing a distributed data storage that can be used both as caching service and coordinator between two or more JVM. One of these framework is [Hazelcast](https://hazelcast.com/) which can be used also for web session clustering. 
 
@@ -322,7 +322,7 @@ Members {size:2, ver:2} [
 Opening our browser at [http://localhost:8084](http://localhost:8084) we should have the confirm that the new instance is using the same session with the same id.
 Feel free to play around stopping/restarting one of the two instances at a time to see that the session isn't lost as long as one instance is still active. 
 
-### Style your application with SCSS
+## Style your application with SCSS
 
 When it comes to web application styling, SCSS is a precious ally as it allows to use a more advanced syntax to manage and organize our css resources. Since SCSS needs to be converted in standard CSS language, we need a compiler to perform this task.
 
