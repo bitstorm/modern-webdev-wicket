@@ -8,9 +8,9 @@ The following is a list of _howto_ and example projects that show you how to use
 More in details you will see how to reach the following goals:
 
 - [Producing clean and resurce-friendly URLs](#produce-resource-friendly-urls)
-- Managing CSS and JavaScript resources with WebJars and Maven (project wicket-webjars)
-- Scaling your application with session clustering and caching
-- Styling your application using SCSS
+- [Managing CSS and JavaScript resources with WebJars and Maven](manage-css-and-javascript-libraries-with-webjars-and-maven)
+- [Scaling your application with session clustering and caching](use-spring-boot-and-hazelcast-to-scale-your-application-with-session-clustering-and-caching)
+- [Styling your application using SCSS](style-your-application-with-scss)
 
 > [!NOTE]
 > The following examples are based on Wicket 10 and Java 21, although they should work also for Wicket 9 and Java 17
