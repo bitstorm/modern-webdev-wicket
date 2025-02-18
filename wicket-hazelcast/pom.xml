@@ -41,7 +41,7 @@
 		</license>
 	</licenses>
 	<properties>
-		<wicket.version>10.0.0</wicket.version>
+		<wicket.version>10.3.0</wicket.version>
 		<wicketstuff.version>10.0.0</wicketstuff.version>
         <spring-session.version>3.2.2</spring-session.version>
 		<slf4j.version>2.0.12</slf4j.version>
